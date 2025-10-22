@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saravana Ruban | Hardware Portfolio</title>
+  <meta name="description" content="Portfolio of Saravana Ruban — board design, verification, and architecture projects (cache simulator, branch predictor, CNN accelerator)." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- top progress bar -->
+  <div id="scroll-progress" aria-hidden="true"><div id="scroll-progress-bar"></div></div>
+
+  <header id="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Saravana Ruban Chermakani</h1>
+        <p class="tagline">From Board Design to Silicon Architecture</p>
+      </div>
+
+      <nav aria-label="Primary navigation" class="nav" id="primary-nav">
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- subtle PCB texture overlay handled in CSS -->
+    <div class="header-decor" aria-hidden="true"></div>
+
+    <!-- scroll-down cue (bounces) -->
+    <a href="#about" class="scroll-cue" aria-hidden="false" title="Scroll to about">
+      <span class="arrow">⌄</span>
+    </a>
+  </header>
+
+  <main>
+    <!-- About Section (photo removed) -->
+    <section id="about" aria-labelledby="about-heading" class="section section-odd">
+      <div class="container about-grid">
+        <div class="about-copy about-copy-alone">
+          <h2 id="about-heading">About</h2>
+          <p class="lead">I’m Saravana Ruban, a hardware engineer now focused on chip-level design and architecture. With a strong foundation in board-level systems, I’m exploring innovative ways to push the boundaries of semiconductors and build high-performance SoCs.</p>
+
+          <ul class="about-details">
+            <li><strong>Current:</strong> M.S in Computer Engineering — NC State University</li>
+            <li><strong>Skills:</strong> Cache hierarchy modeling, Branch predictor modeling, Verilog, SystemVerilog-UVM, C++, Board Design</li>
+            <li><strong>Interests:</strong> CPU architecture, memory systems, low-power accelerators</li>
+          </ul>
+
+          <p class="about-cta">
+            <a href="#projects" class="btn">See Projects</a>
+            <!-- changed to scroll to contact section instead of mailto -->
+            <a href="#contact" class="btn ghost">Contact</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" aria-labelledby="journey-heading" class="section section-even">
+      <div class="container">
+        <h2 id="journey-heading">My Journey</h2>
+        <div class="timeline">
+          <article class="card timeline-card" aria-labelledby="j2019">
+            <h3 id="j2019">2019 – 2023 | Hardware Design Engineer, Data Patterns (Chennai, India)</h3>
+            <p>Designed and tested Radar boards, focusing on RF and digital control circuits. Worked on FPGA sequencing logic and I2C communication for TR module control. Gained solid experience in schematic design, component selection, and board-level testing.</p>
+            <p class="insight">💡 This was where I developed my curiosity about how chips and systems operate beyond the PCB.</p>
+          </article>
+
+          <article class="card timeline-card" aria-labelledby="j2023">
+            <h3 id="j2023">2023 – 2025 | Senior Hardware Design Engineer, HFCL R&amp;D (Bengaluru, India)</h3>
+            <p>Designed board-level system architecture integrating Qualcomm X65/R735 and MediaTek T750 SoCs with LPDDR, Ethernet, USB, and RF front-end modules. Improved power and RF efficiency in next-generation 5G Fixed Wireless Access (FWA) CPE products.</p>
+            <p class="insight">💡 Working around advanced SoCs deepened my interest in exploring SoC architectures and how all the subsystems like CPU, GPU, Memory Controller & DSP blocks are integrated inside a single silicon.</p>
+          </article>
+
+          <article class="card timeline-card" aria-labelledby="jtrainee">
+            <h3 id="jtrainee">Apr 2024 – Sep 2024 | VLSI Design Verification Trainee, ChipEdge Technologies</h3>
+            <p>Hands-on experience building UVM testbenches using SystemVerilog OOP constructs. Verified AXI4-Lite and APB interfaces with randomization, assertions, and coverage models, achieving near-100% coverage.</p>
+            <p class="insight">💡 This phase transitioned me from board-level design to RTL verification and digital design thinking.</p>
+          </article>
+
+          <article class="card timeline-card" aria-labelledby="jms">
+            <h3 id="jms">Aug 2025 – Present | M.S. in Computer Engineering, NC State University (Raleigh, USA)</h3>
+            <p>Focused coursework: Microprocessor Architecture, ASIC &amp; FPGA Design, and Parallel Computer Architecture.</p>
+            <p><strong>Academic projects:</strong></p>
+            <ul class="projects-list">
+              <li><strong>Cache Simulator (C++)</strong> — Modeled multi-level caches with LRU and WBWA policies with Stream Buffer prefetcher at the last level.</li>
+              <li><strong>Branch Predictor Simulator (C++) (On-going)</strong> — Implementing bimodal and gshare predictors with configurable parameters.</li>
+              <li><strong>CNN Accelerator with DRAM Interface (Verilog) (On-going)</strong> — Implementing a Convolutional Neural Network with activation and pooling functions, integrating with DRAM interface.</li>
+            </ul>
+            <p class="insight">💡 Currently exploring CPU modeling, performance, and silicon design — connecting my hardware roots to architectural innovation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" aria-labelledby="projects-heading" class="section section-odd">
+      <div class="container">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="project-grid">
+          <article class="project-card" aria-labelledby="proj-cache">
+            <h3 id="proj-cache">Cache Simulator</h3>
+            <p>Designed in C++ to model L1/L2 cache hierarchies and analyze hit/miss rates under different policies.</p>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj-branch">
+            <h3 id="proj-branch">Branch Predictor</h3>
+            <p>Implementing bimodal and gshare predictors; comparing accuracy vs. hardware complexity.</p>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj-cnn">
+            <h3 id="proj-cnn">CNN Accelerator with DRAM Interface</h3>
+            <p>Designing a Verilog-based CNN accelerator and integrating with a DRAM interface for high-speed data transfer.</p>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj-axi">
+            <h3 id="proj-axi">AXI-4Lite Custom VIP development</h3>
+            <p>Developed a custom AXI4-Lite VIP and modular UVM agent for flexible driver/monitor creation.</p>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj-apb">
+            <h3 id="proj-apb">APB Protocol Verification</h3>
+            <p>Verified APB slave interfaces using SystemVerilog: driver, monitor and scoreboard implementation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-heading" class="section section-even">
+      <div class="container contact">
+        <h2 id="contact-heading">Get in Touch</h2>
+        <p>Email: <a href="mailto:sarubho@gmail.com">sarubho@gmail.com</a></p>
+        <p>
+          <a href="https://github.com/SaravanaRubanC" target="_blank" rel="noopener">GitHub</a>
+          |
+          <a href="https://www.linkedin.com/in/saravana-ruban-chermakani-78318811a/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-divider" aria-hidden="true"></div>
+      <p>© <span id="year">2025</span> Saravana Ruban</p>
+    </div>
+  </footer>
+
+  <!-- scroll-to-top -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top" title="Top">↑</button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
